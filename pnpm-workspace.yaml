@@ -2,3 +2,7 @@
 packages:
   - "apps/*"
   - "packages/*"
+
+# Required by the TypeScript development/test toolchain.
+allowBuilds:
+  esbuild: true
