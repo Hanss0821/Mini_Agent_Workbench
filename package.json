@@ -5,7 +5,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "pnpm --filter @workbench/contracts build && pnpm -r --parallel run dev",
+    "dev:web": "pnpm --filter @workbench/contracts build && pnpm --filter @workbench/web... --parallel run dev",
+    "dev:server": "pnpm --filter @workbench/contracts build && pnpm --filter @workbench/server... --parallel run dev",
+    "build": "pnpm -r run build",
+    "typecheck": "pnpm --filter @workbench/contracts build && pnpm -r run typecheck && tsc -p tsconfig.tools.json",
+    "lint": "pnpm --filter @workbench/web lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "pnpm typecheck && pnpm lint && pnpm test"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +26,10 @@
     }
   },
   "packageManager": "pnpm@12.21.0",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^24.19.2",
+    "typescript": "~6.0.3",
+    "vitest": "^4.1.0"
+  }
 }
