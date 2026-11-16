@@ -1,0 +1,4 @@
+# 告诉 pnpm 哪些目录是 workspace 的一部分
+packages:
+  - "apps/*"
+  - "packages/*"
