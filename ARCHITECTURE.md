@@ -92,7 +92,7 @@ Frontend state should remain local to components when practical. Introduce globa
 
 ### 3.2 Server — Backend Application
 
-**Technology:** Node.js, TypeScript, HTTP framework to be selected during implementation, Zod for request validation through shared Contracts.
+**Technology:** Node.js, TypeScript, Fastify, Zod for request validation through shared Contracts.
 
 Responsibilities:
 
